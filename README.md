@@ -5,7 +5,7 @@ IMPORT TO ECLIPSE
 
 Open GitHub
 
-Download userconnection.jar from the Google Drive link [https://drive.google.com/file/d/0B7eqSUBgNez0SXBtLVBxNFhKSm8/view?usp=sharing] then paset it in libs folder of your project.
+Download userconnection.jar from the Google Drive link [https://drive.google.com/file/d/0B7eqSUBgNez0SXBtLVBxNFhKSm8/view?usp=sharing] then paste it in libs folder of your project.
 
 Then go to properties of that project and click on Java Build path then select libraries and click [add jar ] then from libs folder import the userconnection.jar file.
 
@@ -13,7 +13,7 @@ Then go to properties of that project and click on Java Build path then select l
 
 HOW TO USE
 
-First of all i will tell you now need to use AsyncTask for this, it will save your time, code and effort to connect to any web services or url.
+First of all i will tell you no need to use AsyncTask for this, it will save your time, code and effort to connect to any web services or url.
 
 UserConnection uc=new UserConnection(int);
 
