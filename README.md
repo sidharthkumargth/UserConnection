@@ -110,10 +110,12 @@ uc2.startConnection("http://www.google.com");
 		// TODO Auto-generated method stub
 		if(arg0.arg0.getConnectionHolder()==uc1){
 		////for uc1
+		
 		Log.d("uc1",arg0.getResponse());// output of webservice
 		
 		}else if(arg0.arg0.getConnectionHolder()==uc1){
 		////for uc2
+		
 		Log.d("uc2",arg0.getResponse());
 		}
 	}
@@ -121,7 +123,8 @@ uc2.startConnection("http://www.google.com");
 	@Override
 	public void onProgressUpdate(Status arg0) {
 		// TODO Auto-generated method stub
-		int progress=arg0.getProgress()  // progress statis for downloading image
+		
+		int progress=arg0.getProgress();  // progress statis for downloading image
 		}
 
 }
@@ -146,6 +149,7 @@ uc.startDownloadfrom("http://freedwallpaper.com/wp-content/uploads/2014/03/6-aut
 
 
 /////////// It will download all 5 images at a time we can use a for loop and download many images also
+
 }
 @Override
 	public void onError(Status arg0) {
@@ -161,6 +165,7 @@ uc.startDownloadfrom("http://freedwallpaper.com/wp-content/uploads/2014/03/6-aut
 	@Override
 	public void onStop(Status arg0) {
 		// TODO Auto-generated method stub
+		
 		Log.d("file path",arg0.getFilePath());
 		
 		
@@ -177,7 +182,8 @@ uc.startDownloadfrom("http://freedwallpaper.com/wp-content/uploads/2014/03/6-aut
 	@Override
 	public void onProgressUpdate(Status arg0) {
 		// TODO Auto-generated method stub
-			int progress=arg0.getProgress()
+		
+			int progress=arg0.getProgress();
 		}
 
 }
@@ -201,6 +207,7 @@ uc.startDownloadImage("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopeto
 
 
 /////////// It will download all g images at a time we can use a for loop and download many images also
+
 }
 @Override
 	public void onError(Status arg0) {
