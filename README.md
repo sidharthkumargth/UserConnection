@@ -78,6 +78,7 @@ protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		///////////////  uc1
+		
 uc1=new UserConnection(2)
 uc1.setupValues("email","test@test.com");
 uc1.setupValues("password","test");
@@ -85,6 +86,7 @@ uc1.setConnectionStatusListener(this);
 uc1.startConnection("http://www.google.com");
 
 ////////////////////uc2
+
 uc2=new UserConnection(2)
 uc2.setupValues("email","test@test.com");
 uc2.setupValues("password","test");
