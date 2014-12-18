@@ -21,11 +21,13 @@ uc.startConnection("http://www.test.com/test.php");
 the int value depends on the number of parameters you are using for that webservice if no parameters then use 0 
 
 e.g ///for no parameters
+
 UserConnection uc=new UserConnection(0)
 uc.startConnection("http://www.google.com");
 
 e.g ///for 2 parameters (for Login )
-UserConnection uc=new UserConnection(2)
+
+UserConnection uc=new UserConnection(2);
 uc.setupValues("email","test@test.com");
 uc.setupValues("password","test");
 uc.startConnection("http://www.google.com");
