@@ -22,7 +22,7 @@ the int value depends on the number of parameters you are using for that webserv
 
 e.g ///for no parameters
 
-UserConnection uc=new UserConnection(0)
+UserConnection uc=new UserConnection(0);
 uc.startConnection("http://www.google.com");
 
 e.g ///for 2 parameters (for Login )
