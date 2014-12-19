@@ -14,38 +14,43 @@ Then go to properties of that project and click on Java Build path then select l
 HOW TO USE
 
 First of all i will tell you no need to use AsyncTask for this, it will save your time, code and effort to connect to any web services or url.
+////////////////////
 
 UserConnection uc=new UserConnection(int);
 
 uc.startConnection("http://www.test.com/test.php");
-the int value depends on the number of parameters you are using for that webservice if no parameters then use 0 
 
-e.g ///for no parameters
+//the int value depends on the number of parameters you are using for that webservice if no parameters then use 0 
+
+///for no parameters
 
 UserConnection uc=new UserConnection(0);
 uc.startConnection("http://www.google.com");
 
-e.g ///for 2 parameters (for Login )
+///for 2 parameters (for Login )
 
 UserConnection uc=new UserConnection(2);
 uc.setupValues("email","test@test.com");
 uc.setupValues("password","test");
 uc.startConnection("http://www.google.com");
 
+
 CONNECTION STATUS LISTENER
 
+
 public class Test extends Activity implements ConnectionStatusListener{
-protected void onCreate(Bundle savedInstanceState) {
+  
+   protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-UserConnection uc=new UserConnection(2)
-uc.setupValues("email","test@test.com");
-uc.setupValues("password","test");
-uc.setConnectionStatusListener(this);
-uc.startConnection("http://www.google.com");
-}
-@Override
+     UserConnection uc=new UserConnection(2)
+     uc.setupValues("email","test@test.com");
+     uc.setupValues("password","test");
+     uc.setConnectionStatusListener(this);
+     uc.startConnection("http://www.google.com");
+     }
+        @Override
 	public void onError(Status arg0) {
 		// TODO Auto-generated method stub
 	}
@@ -72,14 +77,18 @@ uc.startConnection("http://www.google.com");
 
 USE MULTIPLE USERCONNECTION
 
-public class Test extends Activity implements ConnectionStatusListener{
-UserConnection uc1,uc2;
-protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+  public class Test extends Activity implements ConnectionStatusListener{
+
+     UserConnection uc1,uc2;
+     protected void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     setContentView(R.layout.activity_main);
+		
 		///////////////  uc1
 		
-uc1=new UserConnection(2)
+         
+        uc1=new UserConnection(2)
+       
 	uc.setHTTPMethod(HTTP.POST);  
 	
 	//for GET uc.setHTTPMethod(HTTP.GET);
@@ -89,10 +98,10 @@ uc1=new UserConnection(2)
 		
 		*/
 		
-uc1.setupValues("email","test@test.com");
-uc1.setupValues("password","test");
-uc1.setConnectionStatusListener(this);
-uc1.startConnection("http://www.google.com");
+          uc1.setupValues("email","test@test.com");
+          uc1.setupValues("password","test");
+          uc1.setConnectionStatusListener(this);
+          uc1.startConnection("http://www.google.com");
 
 ////////////////////uc2
 
