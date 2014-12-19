@@ -232,55 +232,57 @@ First of all i will tell you no need to use AsyncTask for this, it will save you
           }
           
           }
-
-
-
-DIRECT DOWNLOAD A BITMAP 
-
-
-public class Test extends Activity implements ConnectionStatusListener{
-protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-UserConnection uc=new UserConnection(0)
-uc.startDownloadfrom("http://www.technotrigger.com/wp-content/uploads/2014/01/house-in-green-field.jpg","/sdcard/downloadedfile1.jpg");
-
-uc.startDownloadImage("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls1.jpg");
-uc.startDownloadImage("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls2.jpg");
-
-
-
-/////////// It will download all g images at a time we can use a for loop and download many images also
-
-}
-@Override
-	public void onError(Status arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void onStart(Status arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onStop(Status arg0) {
-		// TODO Auto-generated method stub
-		
-		Bitmap b=arg0.getImageBitmap();
-		ImageView.setImageBitmap(b);
-		
-	}
-
-	@Override
-	public void onProgressUpdate(Status arg0) {
-		// TODO Auto-generated method stub
-		
-		}
-
-}
+          
+          
+          DIRECT DOWNLOAD A BITMAP 
+          
+          
+          public class Test extends Activity implements ConnectionStatusListener{
+          
+          protected void onCreate(Bundle savedInstanceState) {
+          
+          super.onCreate(savedInstanceState);
+          setContentView(R.layout.activity_main);
+          UserConnection uc=new UserConnection(0)
+          
+          uc.startDownloadfrom("http://www.technotrigger.com/wp-content/uploads/2014/01/house-in-green-field.jpg","/sdcard/downloadedfile1.jpg");
+          
+          uc.startDownloadImage("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls1.jpg");
+          uc.startDownloadImage("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls2.jpg");
+          
+          /////////// It will download all g images at a time we can use a for loop and download many images also
+          
+          }
+          
+          @Override
+          
+          public void onError(Status arg0) {
+          // TODO Auto-generated method stub
+          
+          }
+          
+          @Override
+          
+          public void onStart(Status arg0) {
+          // TODO Auto-generated method stub
+          
+          }
+          
+          @Override
+          public void onStop(Status arg0) {
+          
+          // TODO Auto-generated method stub
+          
+          Bitmap b=arg0.getImageBitmap();
+          ImageView.setImageBitmap(b);
+          
+          }
+          
+          @Override
+          public void onProgressUpdate(Status arg0) {
+          // TODO Auto-generated method stub
+          }
+          }
 
 
 
