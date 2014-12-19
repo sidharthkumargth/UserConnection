@@ -105,7 +105,7 @@ public class MainActivity extends Activity implements ConnectionStatusListener{
 			
 			//	iv.setImageBitmap(arg0.getImageBitmap());
 			
-			Toast.makeText(getApplicationContext(), arg0.getConnectionHolder()+"++"+arg0.getResponse()+" "+HTTP.GET+" "+HTTP.POST, Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), arg0.getConnectionHolder()+"++"+arg0.getResponse(), Toast.LENGTH_LONG).show();
 		} catch (UserException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
