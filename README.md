@@ -5,7 +5,7 @@ IMPORT TO ECLIPSE
 
 Open GitHub
 
-Download userconnection.jar from the Google Drive link [https://drive.google.com/file/d/0B7eqSUBgNez0SXBtLVBxNFhKSm8/view?usp=sharing] then paste it in libs folder of your project.
+Download userconnection.jar from the Google Drive link [https://drive.google.com/file/d/0B7eqSUBgNez0blhsNUd5QmEtLUk/view?usp=sharing] then paste it in libs folder of your project.
 
 Then go to properties of that project and click on Java Build path then select libraries and click [add jar ] then from libs folder import the userconnection.jar file.
 
