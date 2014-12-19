@@ -1,18 +1,20 @@
 package com.example.testsee;
 
 
+import in.amigoapps.lolipopdialog.CustomDialog;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.commons.io.IOUtils;
-
 import net.amigoapps.usetoconnect.ConnectionStatusListener;
+import net.amigoapps.usetoconnect.HTTP;
 import net.amigoapps.usetoconnect.Status;
 import net.amigoapps.usetoconnect.UserConnection;
 import net.amigoapps.usetoconnect.UserException;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -40,23 +42,29 @@ public class MainActivity extends Activity implements ConnectionStatusListener{
 		tv=(TextView)findViewById(R.id.ttt);
 		pb=(ProgressBar)findViewById(R.id.progressBar1);
 		 uc=new UserConnection(2);
-		uc.setHTTPMethod("POST");
+		uc.setHTTPMethod(HTTP.POST);/// for GET  uc.setHTTPMethod(HTTP.GET);
+		
+		/* OR 
+		 * uc.setHTTPMethod("POST");/// for GET  uc.setHTTPMethod("GET");
+		 * 
+		 */
+		
 		uc.setupValues("email", "test@gmail.com");
 		uc.setupValues("password", "test");
 		
 		uc.setConnectionStatusListener(this);
-		//uc.startConnection("http://test.com/tb/login.php");
+		uc.startConnection("http://taskbell.com/tb/login.php");
 		//uc.startDownloadfrom("http://www.kingsoftstore.com/images/presentation-templates/report-ppt-template-059.dpt","/sdcard/downloadedfile.jpg");
 		//uc.startDownloadImage("http://i00.i.aliimg.com/wsphoto/v0/1157302568/2013-girls-new-style-popular-purple-sexy-lingeries-LC1105-free-shipping.jpg");
-		uc.startDownloadfrom("http://www.technotrigger.com/wp-content/uploads/2014/01/house-in-green-field.jpg","/sdcard/downloadedfile1.jpg");
-		uc.startDownloadfrom("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg","/sdcard/downloadedfile2.jpg");
-		uc.startDownloadfrom("http://upload.wikimedia.org/wikipedia/commons/1/1a/Bachalpseeflowers.jpg","/sdcard/downloadedfile3.jpg");
-		uc.startDownloadfrom("http://tmacfitness.com/wp-content/uploads/2013/04/Beauty-of-nature-random-4884759-1280-800.jpg","/sdcard/downloadedfile4.jpg");
-		uc.startDownloadfrom("http://freedwallpaper.com/wp-content/uploads/2014/03/6-autumn-nature-sandbox-images_2053316.jpg","/sdcard/downloadedfile5.jpg");
-		
+		//uc.startDownloadfrom("http://www.technotrigger.com/wp-content/uploads/2014/01/house-in-green-field.jpg","/sdcard/downloadedfile1.jpg");
+		//uc.startDownloadfrom("http://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg","/sdcard/downloadedfile2.jpg");
+		//uc.startDownloadfrom("http://upload.wikimedia.org/wikipedia/commons/1/1a/Bachalpseeflowers.jpg","/sdcard/downloadedfile3.jpg");
+		//uc.startDownloadfrom("http://tmacfitness.com/wp-content/uploads/2013/04/Beauty-of-nature-random-4884759-1280-800.jpg","/sdcard/downloadedfile4.jpg");
+		//uc.startDownloadfrom("http://freedwallpaper.com/wp-content/uploads/2014/03/6-autumn-nature-sandbox-images_2053316.jpg","/sdcard/downloadedfile5.jpg");
+		//uc.startDownloadImage("http://upload.wikimedia.org/wikipedia/commons/1/1a/Bachalpseeflowers.jpg");
 		//uc.startMultipartConnection("http://www.google.co.in");
 		uc1=new UserConnection(0);
-			uc1.setHTTPMethod("GET");
+			//uc1.setHTTPMethod("GET");
 			//"/sdcard/downloadedfile.jpg"
 			uc1.setConnectionStatusListener(this);
 			//uc1.startConnection("http://www.facebook.com");
@@ -95,9 +103,9 @@ public class MainActivity extends Activity implements ConnectionStatusListener{
 		//Log.d(arg0.getConnectionHolder().toString(), arg0.getResponse()+"");
 		try {
 			
-				iv.setImageDrawable(Drawable.createFromPath(arg0.getFile()));
+			//	iv.setImageBitmap(arg0.getImageBitmap());
 			
-			//Toast.makeText(getApplicationContext(), arg0.getConnectionHolder()+"++"+arg0.getResponse(), Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), arg0.getConnectionHolder()+"++"+arg0.getResponse()+" "+HTTP.GET+" "+HTTP.POST, Toast.LENGTH_LONG).show();
 		} catch (UserException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -115,5 +123,6 @@ public class MainActivity extends Activity implements ConnectionStatusListener{
 			e.printStackTrace();
 		}
 	}
+	
 	
 }
