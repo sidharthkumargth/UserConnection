@@ -40,7 +40,13 @@ public class MainActivity extends Activity implements ConnectionStatusListener{
 		tv=(TextView)findViewById(R.id.ttt);
 		pb=(ProgressBar)findViewById(R.id.progressBar1);
 		 uc=new UserConnection(2);
-		uc.setHTTPMethod("POST");
+		uc.setHTTPMethod(HTTP.POST);  //for GET uc.setHTTPMethod(HTTP.GET);
+	
+		/*  OR
+			uc.setHTTPMethod("POST");  //for GET uc.setHTTPMethod("GET");
+		
+		*/
+		
 		uc.setupValues("email", "test@gmail.com");
 		uc.setupValues("password", "test");
 		
