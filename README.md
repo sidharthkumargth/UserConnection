@@ -80,8 +80,15 @@ protected void onCreate(Bundle savedInstanceState) {
 		///////////////  uc1
 		
 uc1=new UserConnection(2)
-uc.setHTTPMethod(HTTP.POST);
-// or uc.setHTTPMethod(HTTP.GET) or uc.setHTTPMethod("POST") oruc.setHTTPMethod("GET");
+	uc.setHTTPMethod(HTTP.POST);  
+	
+	//for GET uc.setHTTPMethod(HTTP.GET);
+	
+		/*  OR
+			uc.setHTTPMethod("POST");  //for GET uc.setHTTPMethod("GET");
+		
+		*/
+		
 uc1.setupValues("email","test@test.com");
 uc1.setupValues("password","test");
 uc1.setConnectionStatusListener(this);
