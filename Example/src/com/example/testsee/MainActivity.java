@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements ConnectionStatusListener{
 		uc.setupValues("password", "test");
 		
 		uc.setConnectionStatusListener(this);
-		uc.startConnection("http://taskbell.com/tb/login.php");
+		uc.startConnection("http://test.com/login.php");
 		//uc.startDownloadfrom("http://www.kingsoftstore.com/images/presentation-templates/report-ppt-template-059.dpt","/sdcard/downloadedfile.jpg");
 		//uc.startDownloadImage("http://i00.i.aliimg.com/wsphoto/v0/1157302568/2013-girls-new-style-popular-purple-sexy-lingeries-LC1105-free-shipping.jpg");
 		//uc.startDownloadfrom("http://www.technotrigger.com/wp-content/uploads/2014/01/house-in-green-field.jpg","/sdcard/downloadedfile1.jpg");
